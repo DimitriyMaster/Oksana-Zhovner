@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins:500,600,700,800,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Manrope:600,700,800&display=swap);
 /*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
 :root {
   --primary: #0a9396;
@@ -491,15 +493,17 @@ body::after {
   padding: .625rem .625rem
 }
 .main-block__tittle {
+  font-family: Manrope;
   max-width: 22.375rem;
   color: #353a3d;
-  font-weight: 700;
-  line-height: 1.5
+  font-weight: 800;
+  line-height: 1.5789473684
 }
 .main-block__subtitle {
+  font-family: Manrope;
   color: var(--bg-accent);
-  font-weight: 700;
-  line-height: 1.5;
+  font-weight: 800;
+  line-height: 1.5789473684;
   max-width: 22.375rem
 }
 .main-block__photo {
@@ -925,7 +929,7 @@ body::after {
   border: none;
   border-top: 1px solid #353a3d;
   margin: 1rem auto;
-  max-width: 14.375rem
+  max-width: 14.875rem
 }
 .item-pricing__feauters {
   color: #000;
@@ -1630,8 +1634,11 @@ body::after {
   .pricing__item {
     padding: 1rem 2.25rem 1.625rem 2.25rem
   }
+  .item-pricing__line {
+    max-width: 16.875rem
+  }
   .button--wight {
-    width: 100%
+    width: 17.5rem
   }
   .testimonials__spollers {
     grid-template-columns: auto
@@ -1645,6 +1652,11 @@ body::after {
 @media (max-width:47.99875em)and (max-width:0.125em) {
   .menu__body {
     padding-top: 6.25rem
+  }
+}
+@media (max-width:29.99875em) {
+  .pricing__item {
+    padding: 1.25rem .9375rem 1rem .9375rem
   }
 }
 @media (max-width:47.99875em)and (min-width:20em) {
