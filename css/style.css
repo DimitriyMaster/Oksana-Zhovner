@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:regular,500,600,700&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Poppins:500,600,700,800,900&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Manrope:600,700,800&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700,800&display=swap);
 /*! tailwindcss v4.1.6 | MIT License | https://tailwindcss.com */
 :root {
   --primary: #0a9396;
@@ -33,7 +31,7 @@ html {
 body {
   color: #353a3d;
   line-height: 1;
-  font-family: "Montserrat Alternates";
+  font-family: Manrope;
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -44,7 +42,7 @@ body {
 button,
 input,
 textarea {
-  font-family: "Montserrat Alternates";
+  font-family: Manrope;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
@@ -426,7 +424,8 @@ body::after {
   flex-direction: row-reverse;
   align-items: center;
   gap: .625rem;
-  justify-content: center
+  justify-content: center;
+  transition: all .3s ease
 }
 .footer__decor {
   margin: 1.25rem auto;
@@ -493,7 +492,6 @@ body::after {
   padding: .625rem .625rem
 }
 .main-block__tittle {
-  font-family: Manrope;
   max-width: 22.375rem;
   color: #353a3d;
   font-weight: 800;
@@ -884,13 +882,17 @@ body::after {
 }
 .pricing__items {
   display: flex;
-  gap: 2.6875rem;
-  justify-content: center
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-around;
+  align-items: center
 }
 .pricing__item {
-  width: 23.75rem;
+  position: relative;
+  overflow: hidden;
+  max-width: 23.75rem;
   border-radius: 1.5625rem;
-  padding: 1.3125rem 3.5rem 2.25rem 3.5rem;
+  padding: 1.5625rem 2.8125rem;
   transition: box-shadow .3s ease,-webkit-transform .3s ease;
   transition: transform .3s ease,box-shadow .3s ease;
   transition: transform .3s ease,box-shadow .3s ease,-webkit-transform .3s ease
@@ -989,7 +991,7 @@ body::after {
   z-index: 2;
   max-width: 32.5rem;
   border-radius: 4.375rem;
-  padding: 1.5625rem 1.875rem 1.5625rem 1.875rem;
+  padding: 1.875rem 2.1875rem 2.1875rem 1.875rem;
   box-shadow: 0 .125rem .375rem rgba(0,0,0,.05);
   overflow: visible;
   transition: box-shadow .3s ease
@@ -1333,7 +1335,7 @@ body::after {
     padding-top: 1.875rem
   }
   .page__testimonials {
-    padding-bottom: 2.1875rem
+    padding-bottom: 2.5rem
   }
   .main-block__container {
     padding-top: 5.625rem
@@ -1426,11 +1428,6 @@ body::after {
   }
   .button--send {
     margin-bottom: 1.25rem
-  }
-}
-@media (max-width:71.25em) {
-  .pricing__items {
-    flex-wrap: wrap
   }
 }
 @media (max-width:61.99875em) {
@@ -1632,13 +1629,15 @@ body::after {
     text-align: center
   }
   .pricing__item {
-    padding: 1rem 2.25rem 1.625rem 2.25rem
+    padding: 1.25rem 2.8125rem
   }
   .item-pricing__line {
-    max-width: 16.875rem
+    margin: 1rem 0;
+    width: 100%
   }
   .button--wight {
-    width: 17.5rem
+    display: flex;
+    text-align: center
   }
   .testimonials__spollers {
     grid-template-columns: auto
@@ -1652,11 +1651,6 @@ body::after {
 @media (max-width:47.99875em)and (max-width:0.125em) {
   .menu__body {
     padding-top: 6.25rem
-  }
-}
-@media (max-width:29.99875em) {
-  .pricing__item {
-    padding: 1.25rem .9375rem 1rem .9375rem
   }
 }
 @media (max-width:47.99875em)and (min-width:20em) {
@@ -1700,7 +1694,7 @@ body::after {
     padding-top: clamp(1.875rem ,1.1130952381rem + 3.8095238095vw ,3.875rem)
   }
   .page__testimonials {
-    padding-bottom: clamp(2.1875rem ,.6398809524rem + 7.7380952381vw ,6.25rem)
+    padding-bottom: clamp(2.5rem ,1.0714285714rem + 7.1428571429vw ,6.25rem)
   }
   .main-block__container {
     padding-top: clamp(5.625rem ,4.9107142857rem + 3.5714285714vw ,7.5rem)
@@ -1816,6 +1810,9 @@ body::after {
   }
   .footer__blocks a:hover {
     text-decoration: underline
+  }
+  .footer__mail:hover {
+    text-shadow: 4px 5px 5px rgba(19,18,18,.917)
   }
   .social__conact:hover {
     box-shadow: 1px 2.288px 3.318px 1px rgba(19,18,18,.25);
